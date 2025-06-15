@@ -15,6 +15,7 @@
 
 // Include the library
 #include <fmt/format.h>
+#include <fmt/ranges.h>
 
 // Restore conflicting macros
 #pragma pop_macro("F")
