@@ -16,7 +16,18 @@
 // Include the library
 #include <fmt/format.h>
 #include <fmt/ranges.h>
+#include <WString.h>
 
 // Restore conflicting macros
 #pragma pop_macro("F")
 #pragma pop_macro("B1")
+
+// Custom formatter
+template <>
+struct fmt::formatter<String> : fmt::formatter<const char *>
+{
+    auto format(const String &s, fmt::format_context &ctx) const
+    {
+        return fmt::formatter<const char *>::format(s.c_str(), ctx);
+    }
+};
