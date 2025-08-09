@@ -1,3 +1,5 @@
+#pragma once
+
 // Use the header only because compiling the source with the Arduino build system is difficult.
 #define FMT_HEADER_ONLY
 
