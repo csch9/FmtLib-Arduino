@@ -1,0 +1,25 @@
+{
+    "name": "FmtLib",
+    "version": "11.2.0",
+    "keywords": "format, fmtlib, fmt",
+    "license": "MIT",
+    "frameworks": "*",
+    "platforms": "*",
+    "examples": "examples/*/*.ino",
+    "description": "A port of the {fmt} library for Arduino. {fmt} is an open-source formatting library providing a fast and safe alternative to C stdio and C++ iostreams.",
+    "author": [
+        {
+            "name": "Riley Cornelius",
+            "email": "rileyccornelius@gmail.com",
+            "maintainer": true
+        },
+        {
+            "name": "Clément Bonnet",
+            "email": "public@darkwizard.fr"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RileyCornelius/FmtLib-Arduino.git"
+    }
+}
