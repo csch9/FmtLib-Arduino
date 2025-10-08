@@ -1,6 +1,6 @@
 {
     "name": "FmtLib",
-    "version": "11.2.0",
+    "version": "11.2.2",
     "keywords": "format, fmtlib, fmt",
     "license": "MIT",
     "frameworks": "*",
