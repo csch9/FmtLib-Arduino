@@ -9,13 +9,22 @@ This port is based on {fmt} 11.2.0 and is provided as a header-only wrapper to p
 Include the library:
 
 ```c++
-#include "FmtLib.h"
+#include "fmt.h"
 ```
 
-Basic formatting to Serial:
+Format to std string:
 
 ```c++
-Serial.println(fmt::format("millis: {}", millis()).c_str());
+std::string format = fmt::format("Hello {}!", "World");
+Serial.println(format.c_str());
+```
+
+Format to c buffer:
+
+```c++
+char buffer[64] = { 0 };
+fmt::format_to(buffer, "mills: {}", millis());
+Serial.println(buffer);
 ```
 
 ## Notes on configuration
@@ -33,6 +42,8 @@ Arduino sketches demonstrating usage are in `examples/basic` and `examples/buffe
 
 To update the vendored headers, clone [{fmt}](https://github.com/fmtlib/fmt) and copy the folder `include/fmt` into this repository at `src/fmt` (replace the existing folder).
 
-## License
+## Credit
+
+This is a fork of [fmt-arduino](https://github.com/DarkWizarD24/fmt-arduino) that ports fmtlib to Arduino. I added Arduino String support and reduced library binary size.
 
 FmtLib is Arduino port of [{fmt}](https://github.com/fmtlib/fmt) which is distributed under the MIT license.
